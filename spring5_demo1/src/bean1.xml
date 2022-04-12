@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    配置User对象标签                              第二种写法-->
+    <bean id="book" class="com.atguigu.spring5.Book" p:bname="尼玛" p:bauthor="无名">
+    </bean>
+    <bean id="user" class="com.atguigu.spring5.User"></bean>
+
+<!--  ============================================================================  -->
+<!--    有参构造 小关键-->
+    <bean id="orders" class="com.atguigu.spring5.Orders">
+        <constructor-arg name="oname" value="abc"></constructor-arg>
+        <constructor-arg name="address" value="china"></constructor-arg>
+                    <!-- 上面可以写index从0开始       -->
+    </bean>
+
+</beans>
